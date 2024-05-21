@@ -24,9 +24,7 @@ export default function TopNav({ className }: { className?: string }) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          const currentLink = links.find(
-            (link) => link.href.split('/').pop() === `#${id}`,
-          );
+          const currentLink = links.find((link) => link.href === `#${id}`);
           if (currentLink) {
             setActiveSection(currentLink.href);
           }
