@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Inter as FontSans } from 'next/font/google';
+import { Poppins as FontSans } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
+import { Header } from '@/components/page-header';
+
+import { ThemeProvider } from '@/components/theme-provider';
 
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
@@ -20,14 +24,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          storageKey="theme"
+          disableTransitionOnChange={true}
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
