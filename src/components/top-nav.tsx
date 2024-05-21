@@ -3,60 +3,61 @@
 import { cn } from '@/lib/utils';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useEffect, useState, useRef, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function TopNav({ className }: { className?: string }) {
-  const [activeSection, setActiveSection] = useState<string>('/');
-  console.log('TopNav ~ activeSection:', activeSection);
-  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
-  console.log('TopNav ~ sectionsRef:', sectionsRef);
-
-  const links = useMemo(
-    () => [
-      { href: '#home', label: 'Home' },
-      { href: '#about-me', label: 'About' },
-      { href: '#portfolio', label: 'Portfolio' },
-      { href: '#contact', label: 'Contact' },
-    ],
-    [],
+  const [isMounted, setIsMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState(() =>
+    typeof window !== 'undefined' ? window.location.hash : '',
   );
 
+  const links = [
+    { href: '#home', label: 'Home' },
+    { href: '#about-me', label: 'About' },
+    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#contact', label: 'Contact' },
+  ];
+
   useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          const currentLink = links.find((link) => link.href === `#${id}`);
-          if (currentLink) {
-            setActiveSection(currentLink.href);
+    setIsMounted(true);
+  }, []),
+    useEffect(() => {
+      const home = document.getElementById('home');
+      const about = document.getElementById('about-me');
+      const portfolio = document.getElementById('portfolio');
+      const contact = document.getElementById('contact');
+
+      const sections = [home, about, portfolio, contact];
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -90% 0px',
+        threshold: 0.2,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.id === 'home') {
+              setActiveSection('#home');
+            }
+            if (entry.target.id === 'about-me') {
+              setActiveSection('#about-me');
+            }
+            if (entry.target.id === 'portfolio') {
+              setActiveSection('#portfolio');
+            }
+            if (entry.target.id === 'contact') {
+              setActiveSection('#contact');
+            }
           }
-        }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => {
+        section && observer.observe(section);
       });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: '0px 0px -50% 0px',
-    });
-
-    Object.values(sectionsRef.current).forEach((section) => {
-      if (section) {
-        observer.observe(section);
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [links]);
-
-  useEffect(() => {
-    links.forEach((link) => {
-      const sectionId = link.href.startsWith('#') ? link.href.substring(1) : '';
-      if (sectionId) {
-        sectionsRef.current[link.href] = document.getElementById(sectionId);
-      }
-    });
-  }, [links]);
+    }, []);
 
   return (
     <nav
@@ -66,7 +67,7 @@ export default function TopNav({ className }: { className?: string }) {
       )}
     >
       {links.map((link) => {
-        const isActive = activeSection === link.href;
+        const isActive = isMounted && activeSection === link.href;
 
         return (
           <Link
