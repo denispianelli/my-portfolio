@@ -7,7 +7,9 @@ import { useEffect, useState, useRef, useMemo } from 'react';
 
 export default function TopNav({ className }: { className?: string }) {
   const [activeSection, setActiveSection] = useState<string>('/');
+  console.log('TopNav ~ activeSection:', activeSection);
   const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
+  console.log('TopNav ~ sectionsRef:', sectionsRef);
 
   const links = useMemo(
     () => [
