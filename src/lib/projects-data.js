@@ -18,6 +18,16 @@ const projects = [
     image: '/projects/todo-app.png',
 		codeLink: 'https://github.com/denis-pianelli/interactivity-todo-app',
 		demoLink: 'https://denis-pianelli.github.io/interactivity-todo-app/',
+	},
+	{
+		id: 3,
+		type: 'Game',
+		tech: ['React', 'Redux', 'Sass', 'Phaser', 'Node.js', 'Express'],
+		title: 'O\'Survivors',
+		description: 'O\'Survivors is a 2D multiplayer survival game where players must withstand increasingly powerful waves of monsters. ',
+		image: '/projects/o-survivors.png',
+		codeLink: 'https://github.com/denispianelli/projet-tp-front',
+		demoLink: 'https://projet-tp-front.vercel.app/',
 	}
 ];
 
