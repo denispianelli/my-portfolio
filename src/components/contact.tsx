@@ -6,6 +6,7 @@ import { z } from 'zod';
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -31,7 +32,7 @@ const ContactFormSchema = z
       .email({ message: 'Please enter a valid email address' }),
     message: z
       .string()
-      .min(10, { message: 'Your message must be at least 10 characters' })
+      .min(1, { message: 'Your message is required' })
       .max(500, { message: 'Your message must be at most 500 characters' }),
   })
   .required();
@@ -47,6 +48,10 @@ export default function Contact() {
   });
 
   const { toast } = useToast();
+
+  const messageValue = form.watch('message');
+  const messageLength = 500;
+  const charactersLeft = messageLength - messageValue.length;
 
   async function onSubmit(values: z.infer<typeof ContactFormSchema>) {
     await sendMail(values);
@@ -73,7 +78,9 @@ export default function Contact() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>
+                  Name <span className="text-destructive">*</span>
+                </FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your name" {...field} />
                 </FormControl>
@@ -86,7 +93,9 @@ export default function Contact() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>
+                  Email <span className="text-destructive">*</span>
+                </FormLabel>
                 <FormControl>
                   <Input
                     type="email"
@@ -103,14 +112,20 @@ export default function Contact() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>
+                  Message <span className="text-destructive">*</span>
+                </FormLabel>
                 <FormControl>
                   <Textarea
+                    maxLength={500}
                     placeholder="Enter your message"
                     className="h-[200px] resize-none"
                     {...field}
                   />
                 </FormControl>
+                <FormDescription className="text-end">
+                  {charactersLeft}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
