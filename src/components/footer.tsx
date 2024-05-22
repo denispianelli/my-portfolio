@@ -27,7 +27,7 @@ export default function Footer() {
         <small>
           Designed by{' '}
           <Link
-            className="border-b border-black"
+            className="border-b border-primary"
             href={'https://dribbble.com/dejan-vukicevic'}
             target="_blank"
           >
