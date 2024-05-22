@@ -7,6 +7,7 @@ import { Header } from '@/components/page-header';
 import { Toaster } from '@/components/ui/toaster';
 
 import { ThemeProvider } from '@/components/theme-provider';
+import Footer from '@/components/footer';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>
