@@ -27,14 +27,14 @@
 
     --active: 30 100% 50%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 63% 50.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --input: 214.3 7% 63%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 1.5rem;
   }
 
   .dark {
@@ -61,11 +61,11 @@
 
     --active: 30 100% 62%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 72.8% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --input: 214.3 7% 63%;
     --ring: 212.7 26.8% 83.9%;
   }
 }
