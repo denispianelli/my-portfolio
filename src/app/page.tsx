@@ -1,6 +1,7 @@
 import Hero from '@/components/hero';
 import AboutMe from '@/components/about-me';
 import DevProjects from '@/components/dev-projects';
+import Contact from '@/components/contact';
 
 export default function Page() {
   return (
@@ -11,6 +12,8 @@ export default function Page() {
       <AboutMe />
       <div id="portfolio" className="relative -top-[45px]"></div>
       <DevProjects />
+      <div id="contact" className="relative -top-[45px]"></div>
+      <Contact />
     </main>
   );
 }

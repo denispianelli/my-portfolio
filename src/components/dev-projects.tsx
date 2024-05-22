@@ -98,7 +98,7 @@ export default function DevProjects() {
           Games
         </Button>
       </div>
-      <div className="mx-auto grid w-[90%] gap-12 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-auto grid w-[90%] grid-flow-row gap-12 md:grid-cols-2 xl:grid-cols-3">
         {filteredProjects.map((project: Project) => (
           <Card key={project.id} className="grid overflow-hidden">
             <CardHeader>
@@ -110,6 +110,7 @@ export default function DevProjects() {
                 alt={project.title}
                 width={500}
                 height={500}
+                priority
               />
               <ul className="mt-2 flex flex-wrap gap-2 text-sm text-muted-foreground">
                 {project.tech.map((tech: string) => (
