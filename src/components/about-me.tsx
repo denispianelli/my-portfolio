@@ -15,26 +15,41 @@ export default function AboutMe() {
   const t = useTranslations('AboutMe');
   return (
     <>
-      <section className="my-8 flex w-[300px] flex-col items-center justify-center text-sm md:w-[500px]">
+      <section className="mx-4 my-8 flex w-[300px] flex-col items-center justify-center text-sm md:w-[500px]">
         <h2 className="mb-4 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
           {t('h2')} &#60;coder&#62;
         </h2>
         <p className="text-muted-foreground">{t('p1')}</p>
         <div className="mt-10 flex w-full flex-col justify-start gap-6">
-          <div className="grid gap-2">
-            <GraduationCap />
-            <p className="text-foreground">{t('p2')}</p>
-            <p className="text-muted-foreground">{t('p3')}</p>
+          <div className="flex gap-6">
+            <Separator orientation="vertical" className="h-10" />
+            <div className="grid gap-2">
+              <GraduationCap />
+              <p className="text-muted-foreground">
+                <span className="text-foreground">{t('p2')} </span>
+                {t('p3')}
+              </p>
+            </div>
           </div>
-          <div className="grid gap-2">
-            <FlaskConical />
-            <p className="text-foreground">{t('p4')}</p>
-            <p className="text-muted-foreground">{t('p5')}</p>
+          <div className="flex gap-6">
+            <Separator orientation="vertical" className="h-10" />
+            <div className="grid gap-2">
+              <FlaskConical />
+              <p className="text-muted-foreground">
+                <span className="text-foreground">{t('p4')} </span>
+                {t('p5')}
+              </p>
+            </div>
           </div>
-          <div className="grid gap-2">
-            <Users />
-            <p className="text-foreground">{t('p6')}</p>
-            <p className="text-muted-foreground">{t('p7')}</p>
+          <div className="flex gap-6">
+            <Separator orientation="vertical" className="h-10" />
+            <div className="grid gap-2">
+              <Users />
+              <p className="text-muted-foreground">
+                <span className="text-foreground">{t('p6')} </span>
+                {t('p7')}
+              </p>
+            </div>
           </div>
         </div>
       </section>

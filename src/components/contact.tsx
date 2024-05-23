@@ -66,7 +66,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="mt-16 min-h-[calc(100vh-64px)] max-w-[340px] md:max-w-[460px]">
+    <section className="mx-4 mt-16 min-h-[calc(100vh-64px)] max-w-[340px] md:max-w-[460px]">
       <h2 className="mb-4 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
         {t('h2')}
       </h2>

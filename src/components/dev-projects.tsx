@@ -43,12 +43,12 @@ export default function DevProjects() {
       : projects.filter((project: Project) => project.type === filter);
 
   return (
-    <section className="my-32">
+    <section className="mx-4 my-32">
       <h2 className="mb-2 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
         {t('h2')}
       </h2>
       <p className="mb-6 text-center text-muted-foreground">{t('p1')}</p>
-      <div className="mb-6 flex justify-center gap-4">
+      <div className="mb-6 flex justify-center gap-2 [&>button]:text-xs sm:[&>button]:text-base">
         <Button
           onClick={() => setFilter('All')}
           variant={'ghost'}
@@ -129,7 +129,7 @@ export default function DevProjects() {
                   : project.descriptionFr}
               </p>
             </CardContent>
-            <CardFooter className="grid grid-cols-2 gap-2">
+            <CardFooter className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               <Link className="grid" href={project.codeLink} target="_blank">
                 <Button className="gap-2">
                   <FaGithub />

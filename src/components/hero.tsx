@@ -9,13 +9,13 @@ import { useTranslations } from 'next-intl';
 export default function Hero() {
   const t = useTranslations('Hero');
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center text-center lg:grid  lg:w-[80%] lg:grid-flow-row lg:grid-cols-2 lg:px-0 ">
+    <section className="mx-4 flex min-h-screen flex-col items-center justify-center text-center lg:grid  lg:w-[80%] lg:grid-flow-row lg:grid-cols-2 lg:px-0 ">
       <div className="lg:self-end">
         <h1 className=" z-50 mb-4 scroll-m-20 text-7xl font-extrabold tracking-tight lg:mb-0 lg:max-w-[800px] lg:self-end lg:text-[10rem]">
           {t('h1')}
         </h1>
-        <h2 className="mb-1 text-3xl font-semibold">{t('h1')}</h2>
-        <p className="lg:mb-2">&#123; {t('p1')} &#125;</p>
+        <h2 className="mb-1 text-3xl font-semibold">{t('h2')}</h2>
+        <p className="lg:mb-2">{t('p1')}</p>
       </div>
       <div className="mx-auto lg:row-span-2">
         <Image
