@@ -23,7 +23,7 @@
   "Hero": {
     "h1": "Hello.",
     "h2": "Full Stack Developer",
-    "p1": "JavaScript, React, Next.js, Prisma, Tailwind...",
+    "p1": "'{'JavaScript, React, Next.js, Prisma, Tailwind...'}'",
     "p2": "English, French",
     "p3": "Available for hire",
     "p4": "On-site, Remote",
@@ -34,11 +34,11 @@
   "AboutMe": {
     "h2": "Problem solver",
     "p1": "Full Stack Developer with over 2 years of experience.",
-    "p2": "Certification:",
+    "p2": "Certification.",
     "p3": "Professional Title: Web and Mobile Web Developer Level 5 (equivalent to a diploma at the level of a two-year undergraduate degree) registered in the RNCP under number 37674.",
-    "p4": "Specializing in React & Next.js:",
+    "p4": "Specializing in React & Next.js.",
     "p5": "I am constantly working on learning new technologies and improving my skills.",
-    "p6": "Love working in team:",
+    "p6": "Love working in team.",
     "p7": "I enjoy working with other developers and designers to create the best possible product. I am always open to new ideas and suggestions.",
     "p8": "Strong JavaScript knowledge and advanced web development.",
     "p9": "Building fast React App's and websites.",
