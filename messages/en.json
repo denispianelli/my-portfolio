@@ -1,0 +1,84 @@
+{
+  "Language": {
+    "locale": "en"
+  },
+  "Navigation": {
+    "home": {
+      "label": "Home",
+      "link": "#home"
+    },
+    "about": {
+      "label": "About",
+      "link": "#about-me"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "link": "#portfolio"
+    },
+    "contact": {
+      "label": "Contact",
+      "link": "#contact"
+    }
+  },
+  "Hero": {
+    "h1": "Hello.",
+    "h2": "Full Stack Developer",
+    "p1": "JavaScript, React, Next.js, Prisma, Tailwind...",
+    "p2": "English, French",
+    "p3": "Available for hire",
+    "p4": "On-site, Remote",
+    "p5": "Specializing in React and Next.js, I utilize advanced technologies to create dynamic and engaging web applications.",
+    "button1": "See my dev works",
+    "button2": "Download CV"
+  },
+  "AboutMe": {
+    "h2": "Problem solver",
+    "p1": "Full Stack Developer with over 2 years of experience.",
+    "p2": "Certification:",
+    "p3": "Professional Title: Web and Mobile Web Developer Level 5 (equivalent to a diploma at the level of a two-year undergraduate degree) registered in the RNCP under number 37674.",
+    "p4": "Specializing in React & Next.js:",
+    "p5": "I am constantly working on learning new technologies and improving my skills.",
+    "p6": "Love working in team:",
+    "p7": "I enjoy working with other developers and designers to create the best possible product. I am always open to new ideas and suggestions.",
+    "p8": "Strong JavaScript knowledge and advanced web development.",
+    "p9": "Building fast React App's and websites.",
+    "p10": "Fast client-side and Server-side Rendering with Client and Server Components. Further optimized with Static and Dynamic Rendering on the server.",
+    "p11": "Tailwind CSS lets me build custom, responsive designs faster with its utility-first approach and pre-defined classes..",
+    "p12": "Using PostgreSQL for scalable databases on the backend.",
+    "p13": "Next-generation Node.js and TypeScript ORM that unlocks a new level of developer experience when working with databases.",
+    "p14": "Enables efficient, scalable server-side applications with its non-blocking, event-driven architecture.",
+    "p15": "Streamlines Node.js web application development with its minimal, flexible framework and robust set of features."
+  },
+  "DevProjects": {
+    "h2": "My '{'dev'}' projects",
+    "p1": "From Web Apps to Website & Games",
+    "button1": "All",
+    "button2": "Apps",
+    "button3": "Websites",
+    "button4": "Games",
+    "button5": "View Code",
+    "button6": "View Demo"
+  },
+  "Contact": {
+    "h2": "Let's [work] together",
+    "p1": "Enhance your digital presence with effective and reliable web development solutions. Ready to collaborate?",
+    "Item1": {
+      "label": "Name",
+      "placeholder": "Enter your name"
+    },
+    "Item2": {
+      "label": "Email",
+      "placeholder": "Enter your email"
+    },
+    "Item3": {
+      "label": "Message",
+      "placeholder": "Enter your message"
+    },
+    "button1": "Send message"
+  },
+  "Footer": {
+    "p1": "Copyright © 2024 All rights reserved.",
+    "p2": "Designed by",
+    "p3": "Developed by"
+  }
+}

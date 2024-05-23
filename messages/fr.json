@@ -1,0 +1,84 @@
+{
+  "Language": {
+    "locale": "fr"
+  },
+  "Navigation": {
+    "home": {
+      "label": "Accueil",
+      "link": "#accueil"
+    },
+    "about": {
+      "label": "À propos",
+      "link": "#a-propos"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "link": "#portfolio"
+    },
+    "contact": {
+      "label": "Contact",
+      "link": "#contact"
+    }
+  },
+  "Hero": {
+    "h1": "Hello.",
+    "h2": "Développeur Full Stack",
+    "p1": "JavaScript, React, Next.js, Prisma, Tailwind...",
+    "p2": "Anglais, Français",
+    "p3": "Disponible pour embauche",
+    "p4": "Sur site, Télétravail",
+    "p5": "Spécialisé en React et Next.js, j'utilise des technologies avancées pour créer des applications web dynamiques et engageantes.",
+    "button1": "Voir mes projets",
+    "button2": "Télécharger mon CV"
+  },
+  "AboutMe": {
+    "h2": "Résolveur de problèmes",
+    "p1": "Développeur Full Stack avec plus de 2 ans d'expérience.",
+    "p2": "Certification :",
+    "p3": "Titre Professionnel : Développeur Web et Web Mobile Niveau 5 (équivalent à un diplôme de niveau bac +2) enregistré au RNCP sous le numéro 37674.",
+    "p4": "Spécialisé en React & Next.js :",
+    "p5": "Je travaille constamment à l'apprentissage de nouvelles technologies et à l'amélioration de mes compétences.",
+    "p6": "Aime travailler en équipe :",
+    "p7": "J'aime travailler avec d'autres développeurs et designers pour créer le meilleur produit possible. Je suis toujours ouvert aux nouvelles idées et suggestions.",
+    "p8": "Solide connaissance de JavaScript et développement web avancé.",
+    "p9": "Création d'applications et de sites web React rapides.",
+    "p10": "Rendu côté client et côté serveur rapide avec des composants client et serveur. Optimisé davantage avec le rendu statique et dynamique côté serveur.",
+    "p11": "Tailwind CSS me permet de créer des designs personnalisés et réactifs plus rapidement grâce à son approche utilitaire et ses classes pré-définies.",
+    "p12": "Utilisation de PostgreSQL pour des bases de données évolutives en backend.",
+    "p13": "ORM Node.js et TypeScript de nouvelle génération qui offre une expérience de développement améliorée pour travailler avec des bases de données.",
+    "p14": "Permet des applications côté serveur efficaces et évolutives avec son architecture non bloquante et événementielle.",
+    "p15": "Simplifie le développement d'applications web Node.js avec son cadre minimaliste et flexible et son ensemble de fonctionnalités robustes."
+  },
+  "DevProjects": {
+    "h2": "Mes projets '{'dev'}'",
+    "p1": "D'applications web aux Sites Web et Jeux",
+    "button1": "Tous",
+    "button2": "Applications",
+    "button3": "Sites web",
+    "button4": "Jeux",
+    "button5": "Voir le code",
+    "button6": "Voir la démo"
+  },
+  "Contact": {
+    "h2": "Travaillons [ensemble]",
+    "p1": "Améliorez votre présence numérique avec des solutions de développement web efficaces et fiables. Prêt à collaborer ?",
+    "Item1": {
+      "label": "Nom",
+      "placeholder": "Entrez votre nom"
+    },
+    "Item2": {
+      "label": "Email",
+      "placeholder": "Entrez votre email"
+    },
+    "Item3": {
+      "label": "Message",
+      "placeholder": "Entrez votre message"
+    },
+    "button1": "Envoyer le message"
+  },
+  "Footer": {
+    "p1": "Copyright © 2024 Tous droits réservés.",
+    "p2": "Conçu par",
+    "p3": "Développé par"
+  }
+}
