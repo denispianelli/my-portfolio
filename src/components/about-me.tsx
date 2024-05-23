@@ -9,43 +9,32 @@ import {
   SiTailwindcss,
 } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
+import { useTranslations } from 'next-intl';
 
 export default function AboutMe() {
+  const t = useTranslations('AboutMe');
   return (
     <>
       <section className="my-8 flex w-[300px] flex-col items-center justify-center text-sm md:w-[500px]">
-        <h2 className="mb-4 scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
-          Problem solver &#60;coder&#62;
+        <h2 className="mb-4 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
+          {t('h2')} &#60;coder&#62;
         </h2>
-        <p className="text-muted-foreground">
-          Full Stack Developer with over 2 years of experience.
-        </p>
+        <p className="text-muted-foreground">{t('p1')}</p>
         <div className="mt-10 flex w-full flex-col justify-start gap-6">
           <div className="grid gap-2">
             <GraduationCap />
-            <p className="text-foreground">Certification:</p>
-            <p className="text-muted-foreground">
-              Professional Title: Web and Mobile Web Developer Level 5
-              (equivalent to a diploma at the level of a two-year undergraduate
-              degree) registered in the RNCP under number 37674.
-            </p>
+            <p className="text-foreground">{t('p2')}</p>
+            <p className="text-muted-foreground">{t('p3')}</p>
           </div>
           <div className="grid gap-2">
             <FlaskConical />
-            <p className="text-foreground">Specializing in React & Next.js:</p>
-            <p className="text-muted-foreground">
-              I am constantly working on learning new technologies and improving
-              my skills.
-            </p>
+            <p className="text-foreground">{t('p4')}</p>
+            <p className="text-muted-foreground">{t('p5')}</p>
           </div>
           <div className="grid gap-2">
             <Users />
-            <p className="text-foreground">Love working in team:</p>
-            <p className="text-muted-foreground">
-              I enjoy working with other developers and designers to create the
-              best possible product. I am always open to new ideas and
-              suggestions.
-            </p>
+            <p className="text-foreground">{t('p6')}</p>
+            <p className="text-muted-foreground">{t('p7')}</p>
           </div>
         </div>
       </section>
@@ -59,7 +48,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Javascript</p>
-            <p>Strong JavaScript knowledge and advanced web development.</p>
+            <p>{t('p8')}</p>
           </div>
         </div>
         <div className="flex">
@@ -68,7 +57,7 @@ export default function AboutMe() {
           <div className="ml-6 flex flex-col gap-4">
             <FaReact size={30} className="text-[#000002] dark:text-[#807D90]" />
             <p>React</p>
-            <p>Building fast React App&apos;s and websites.</p>
+            <p>{t('p9')}</p>
           </div>
         </div>
         <div className="flex">
@@ -80,11 +69,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Next.js</p>
-            <p>
-              Fast client-side and Server-side Rendering with Client and Server
-              Components. Further optimized with Static and Dynamic Rendering on
-              the server.
-            </p>
+            <p>{t('p10')}</p>
           </div>
         </div>
         <div className="flex">
@@ -96,10 +81,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Tailwind CSS</p>
-            <p>
-              Tailwind CSS lets me build custom, responsive designs faster with
-              its utility-first approach and pre-defined classes..
-            </p>
+            <p>{t('p11')} </p>
           </div>
         </div>
         <div className="flex">
@@ -111,7 +93,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>PostgreSQL</p>
-            <p>Using PostgreSQL for scalable databases on the backend.</p>
+            <p>{t('p12')}</p>
           </div>
         </div>
         <div className="flex">
@@ -123,10 +105,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Prisma</p>
-            <p>
-              Next-generation Node.js and TypeScript ORM that unlocks a new
-              level of developer experience when working with databases.
-            </p>
+            <p>{t('p13')}</p>
           </div>
         </div>
         <div className="flex">
@@ -138,10 +117,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Node.js</p>
-            <p>
-              Enables efficient, scalable server-side applications with its
-              non-blocking, event-driven architecture.
-            </p>
+            <p>{t('p14')} </p>
           </div>
         </div>
         <div className="flex">
@@ -153,10 +129,7 @@ export default function AboutMe() {
               className="text-[#000002] dark:text-[#807D90]"
             />
             <p>Express</p>
-            <p>
-              Streamlines Node.js web application development with its minimal,
-              flexible framework and robust set of features.
-            </p>
+            <p>{t('p15')} </p>
           </div>
         </div>
       </section>

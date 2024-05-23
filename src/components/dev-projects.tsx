@@ -15,6 +15,7 @@ import { IoBrowsersOutline } from 'react-icons/io5';
 import Link from 'next/link';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 const { projects } = require('@/lib/projects-data');
 
 export default function DevProjects() {
@@ -23,11 +24,16 @@ export default function DevProjects() {
     type: string;
     tech: string[];
     title: string;
-    description: string;
+    descriptionEn: string;
+    descriptionFr: string;
     image: string;
     codeLink: string;
     demoLink: string;
   }
+
+  const t = useTranslations('DevProjects');
+  const language = useTranslations('Language');
+  const locale = language('locale');
 
   const [filter, setFilter] = useState('All');
 
@@ -39,11 +45,9 @@ export default function DevProjects() {
   return (
     <section className="my-32">
       <h2 className="mb-2 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
-        My &#123;dev&#125; projects
+        {t('h2')}
       </h2>
-      <p className="mb-6 text-center text-muted-foreground">
-        From Web Apps to Website & Games
-      </p>
+      <p className="mb-6 text-center text-muted-foreground">{t('p1')}</p>
       <div className="mb-6 flex justify-center gap-4">
         <Button
           onClick={() => setFilter('All')}
@@ -56,7 +60,7 @@ export default function DevProjects() {
             },
           )}
         >
-          All
+          {t('button1')}
         </Button>
         <Button
           onClick={() => setFilter('App')}
@@ -69,7 +73,7 @@ export default function DevProjects() {
             },
           )}
         >
-          Apps
+          {t('button2')}
         </Button>
         <Button
           onClick={() => setFilter('Website')}
@@ -82,7 +86,7 @@ export default function DevProjects() {
             },
           )}
         >
-          Websites
+          {t('button3')}
         </Button>
         <Button
           onClick={() => setFilter('Game')}
@@ -95,7 +99,7 @@ export default function DevProjects() {
             },
           )}
         >
-          Games
+          {t('button4')}
         </Button>
       </div>
       <div className="mx-auto grid w-[90%] grid-flow-row gap-12 md:grid-cols-2 xl:grid-cols-3">
@@ -120,20 +124,22 @@ export default function DevProjects() {
                 ))}
               </ul>
               <p className="mt-4 line-clamp-6 text-ellipsis text-sm leading-6">
-                {project.description}
+                {locale === 'en'
+                  ? project.descriptionEn
+                  : project.descriptionFr}
               </p>
             </CardContent>
             <CardFooter className="grid grid-cols-2 gap-2">
               <Link className="grid" href={project.codeLink} target="_blank">
                 <Button className="gap-2">
                   <FaGithub />
-                  View Code
+                  {t('button5')}
                 </Button>
               </Link>
               <Link className="grid" href={project.demoLink} target="_blank">
                 <Button className="gap-2 bg-active">
                   <IoBrowsersOutline />
-                  View Demo
+                  {t('button6')}
                 </Button>
               </Link>
             </CardFooter>

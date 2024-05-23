@@ -1,22 +1,30 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { SheetClose } from './ui/sheet';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 export default function SideNav() {
-  const pathname = usePathname();
+  let hash = '';
+
+  if (typeof window !== 'undefined') {
+    hash = window.location.hash;
+  }
+
+  console.log('const[hash,setHash]=useState ~ hash:', hash);
+
+  const t = useTranslations('Navigation');
 
   const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#about-me', label: 'About' },
-    { href: '#portfolio', label: 'Work' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: t('home.label') },
+    { href: '#about-me', label: t('about.label') },
+    { href: '#portfolio', label: t('portfolio.label') },
+    { href: '#contact', label: t('contact.label') },
   ];
 
   return (
-    <nav className="text-md grid gap-6 font-medium">
+    <nav className="text-md mb-6 grid gap-6 font-medium">
       {links.map((link) => {
         return (
           <SheetClose key={link.label} asChild>
@@ -26,11 +34,11 @@ export default function SideNav() {
               className={clsx(
                 'transition-colors',
                 {
-                  'text-active': pathname === link.href,
+                  'text-active': hash === link.href,
                 },
                 {
                   'text-muted-foreground hover:text-foreground':
-                    pathname !== link.href,
+                    hash !== link.href,
                 },
               )}
             >

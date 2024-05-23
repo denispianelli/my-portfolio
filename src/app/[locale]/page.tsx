@@ -6,7 +6,7 @@ import Contact from '@/components/contact';
 export default function Page() {
   return (
     <main className="flex flex-col items-center">
-      <div id="home" className="relative"></div>
+      <div id="home" className="relative -top-[64px]"></div>
       <Hero />
       <div id="about-me" className="relative -top-[45px]"></div>
       <AboutMe />

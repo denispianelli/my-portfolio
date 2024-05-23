@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function TopNav({ className }: { className?: string }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -11,11 +12,13 @@ export default function TopNav({ className }: { className?: string }) {
     typeof window !== 'undefined' ? window.location.hash : '',
   );
 
+  const t = useTranslations('Navigation');
+
   const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#about-me', label: 'About' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: t('home.label') },
+    { href: '#about-me', label: t('about.label') },
+    { href: '#portfolio', label: t('portfolio.label') },
+    { href: '#contact', label: t('contact.label') },
   ];
 
   useEffect(() => {
@@ -68,7 +71,6 @@ export default function TopNav({ className }: { className?: string }) {
     >
       {links.map((link) => {
         const isActive = isMounted && activeSection === link.href;
-
         return (
           <Link
             key={link.label}

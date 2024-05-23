@@ -18,6 +18,7 @@ import { Textarea } from './ui/textarea';
 import { Loader2 } from 'lucide-react';
 import { sendMail } from '@/lib/services';
 import { useToast } from './ui/use-toast';
+import { useTranslations } from 'next-intl';
 
 const ContactFormSchema = z
   .object({
@@ -47,6 +48,8 @@ export default function Contact() {
     },
   });
 
+  const t = useTranslations('Contact');
+
   const { toast } = useToast();
 
   const messageValue = form.watch('message');
@@ -65,12 +68,9 @@ export default function Contact() {
   return (
     <section className="mt-16 min-h-[calc(100vh-64px)] max-w-[340px] md:max-w-[460px]">
       <h2 className="mb-4 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
-        Let&apos;s &#91;work&#93; together
+        {t('h2')}
       </h2>
-      <p className="mb-12 text-center text-muted-foreground">
-        Enhance your digital presence with effective and reliable web
-        development solutions. Ready to collaborate?
-      </p>
+      <p className="mb-12 text-center text-muted-foreground">{t('p1')}</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
@@ -79,10 +79,10 @@ export default function Contact() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Name <span className="text-destructive">*</span>
+                  {t('Item1.label')} <span className="text-destructive">*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your name" {...field} />
+                  <Input placeholder={t('Item1.placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,12 +94,12 @@ export default function Contact() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Email <span className="text-destructive">*</span>
+                  {t('Item2.label')} <span className="text-destructive">*</span>
                 </FormLabel>
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t('Item2.placeholder')}
                     {...field}
                   />
                 </FormControl>
@@ -113,12 +113,12 @@ export default function Contact() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Message <span className="text-destructive">*</span>
+                  {t('Item3.label')} <span className="text-destructive">*</span>
                 </FormLabel>
                 <FormControl>
                   <Textarea
                     maxLength={500}
-                    placeholder="Enter your message"
+                    placeholder={t('Item3.placeholder')}
                     className="h-[200px] resize-none"
                     {...field}
                   />
@@ -139,16 +139,17 @@ export default function Contact() {
 
 function SubmitButton() {
   const { isSubmitting } = useFormState();
+  const t = useTranslations('Contact');
 
   return (
     <Button className="bg-active" type="submit" disabled={isSubmitting}>
       {isSubmitting ? (
         <>
           <Loader2 className="mr-2 size-6 animate-spin" />
-          Send message
+          {t('button1')}
         </>
       ) : (
-        'Send message'
+        t('button1')
       )}
     </Button>
   );
