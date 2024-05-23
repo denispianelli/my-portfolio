@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="mx-auto w-fit lg:self-start">
-        <h3 className="mb-4 scroll-m-20 text-2xl tracking-tight">
+        <h3 className="my-4 scroll-m-20 text-2xl tracking-tight">
           Denis Pianelli
         </h3>
         <p className="text-muted-foreground">{t('p5')}</p>

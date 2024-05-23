@@ -5,8 +5,9 @@ import { Button } from './ui/button';
 import Image from 'next/image';
 import { Separator } from './ui/separator';
 import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ className }: { className?: string }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -23,7 +24,7 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex gap-2">
+    <div className={cn('flex items-center gap-2', className)}>
       <Button
         className={clsx({
           'bg-accent': pathname.includes('/fr'),
@@ -39,7 +40,7 @@ export default function LocaleSwitcher() {
           height={24}
         ></Image>
       </Button>
-      <Separator orientation={'vertical'} />
+      <Separator orientation={'vertical'} className="h-8" />
       <Button
         className={clsx({
           'bg-accent': pathname.includes('/en'),
