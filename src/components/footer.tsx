@@ -6,7 +6,7 @@ export default function Footer() {
   const t = useTranslations('Footer');
   return (
     <footer>
-      <div className="m-4 grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-3">
+      <div className="m-4 grid grid-cols-1 justify-items-center gap-4 text-center lg:grid-cols-3">
         <small>{t('p1')}</small>
         <div className="flex gap-2">
           <Link

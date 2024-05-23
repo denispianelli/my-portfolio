@@ -46,7 +46,7 @@ export default function Hero() {
         </h3>
         <p className="text-muted-foreground">{t('p5')}</p>
         <div className="mt-8 flex justify-center gap-4">
-          <Link href="/work">
+          <Link href="#portfolio">
             <Button className="bg-active">{t('button1')}</Button>
           </Link>
           <a href="/Denis-Pianelli-cv.pdf" download>
