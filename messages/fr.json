@@ -2,6 +2,10 @@
   "Language": {
     "locale": "fr"
   },
+  "Metadata": {
+    "title": "Développeur Full Stack",
+    "description": "Spécialisé en React et Next.js, j'utilise des technologies avancées pour créer des applications web dynamiques et engageantes. Disponible pour embauche. Sur site, Télétravail. Anglais, Français. Portfolio de projets de développement web. Contactez-moi pour discuter de votre projet."
+  },
   "Navigation": {
     "home": {
       "label": "Accueil",

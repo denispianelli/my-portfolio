@@ -2,6 +2,10 @@
   "Language": {
     "locale": "en"
   },
+  "Metadata": {
+    "title": "Full Stack Developer",
+    "description": "Specializing in React and Next.js, I utilize advanced technologies to create dynamic and engaging web applications. Available for hire on-site or remote. English, French. See my dev works. Download CV."
+  },
   "Navigation": {
     "home": {
       "label": "Home",
