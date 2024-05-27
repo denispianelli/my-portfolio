@@ -49,7 +49,7 @@ export default function DevProjects() {
       </h2>
       <p className="mb-6 text-center text-muted-foreground">{t('p1')}</p>
       <div className="mb-6 flex justify-center gap-2 [&>button]:text-xs sm:[&>button]:text-base">
-        <Button
+        {/* <Button
           onClick={() => setFilter('All')}
           variant={'ghost'}
           className={clsx(
@@ -61,7 +61,7 @@ export default function DevProjects() {
           )}
         >
           {t('button1')}
-        </Button>
+        </Button> */}
         <Button
           onClick={() => setFilter('App')}
           variant={'ghost'}
@@ -104,7 +104,7 @@ export default function DevProjects() {
       </div>
       <div className="mx-auto grid w-[90%] grid-flow-row gap-12 md:grid-cols-2 xl:grid-cols-3">
         {filteredProjects.map((project: Project) => (
-          <Card key={project.id} className="grid overflow-hidden">
+          <Card key={project.id} className="grid h-[600px] overflow-hidden">
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
             </CardHeader>
