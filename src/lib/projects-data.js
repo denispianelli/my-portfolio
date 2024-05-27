@@ -36,5 +36,19 @@ export const projects = [
     codeLink: 'https://github.com/denispianelli/projet-tp-front',
     demoLink: 'https://projet-tp-front.vercel.app/',
   },
+	{
+    id: 4,
+    type: 'Website',
+    tech: ['Next.js', 'React', 'Tailwind'],
+    title: "Planets Fact",
+    descriptionEn:
+      "Planets Fact is an educational website that provides detailed information and interesting facts about each of the eight planets in our solar system.",
+    descriptionFr: 
+      "Planets Fact est un site web éducatif qui fournit des informations détaillées et des faits intéressants sur chacune des huit planètes de notre système solaire.",
+    image: '/projects/planets-fact.png',
+    codeLink: 'https://github.com/denispianelli/nextjs-planets-fact-site',
+    demoLink: 'https://nextjs-planets-fact-site.vercel.app/',
+}
+
 ];
 
