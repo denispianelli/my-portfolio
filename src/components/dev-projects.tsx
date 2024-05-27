@@ -35,7 +35,7 @@ export default function DevProjects() {
   const language = useTranslations('Language');
   const locale = language('locale');
 
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState('App');
 
   const filteredProjects: Project[] =
     filter === 'All'
