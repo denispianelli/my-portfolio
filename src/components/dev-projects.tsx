@@ -113,7 +113,13 @@ export default function DevProjects() {
             </CardHeader>
             <CardContent>
               <div className="relative h-[130px] w-[260px]">
-                <Image src={project.image} alt={project.title} fill priority />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="130px"
+                  priority
+                />
               </div>
               <ul className="mt-2 flex h-[52px] flex-wrap gap-2 text-sm text-muted-foreground">
                 {project.tech.map((tech: string) => (
