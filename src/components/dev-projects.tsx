@@ -43,7 +43,7 @@ export default function DevProjects() {
       : projects.filter((project: Project) => project.type === filter);
 
   return (
-    <section className="mx-4 my-32">
+    <section className="mx-4 my-32 w-full">
       <h2 className="mb-2 scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
         {t('h2')}
       </h2>
@@ -102,34 +102,33 @@ export default function DevProjects() {
           {t('button4')}
         </Button>
       </div>
-      <div className="mx-auto grid w-[90%] grid-flow-row gap-12 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-auto grid grid-flow-row justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,308px)] lg:grid-cols-[repeat(3,308px)]">
         {filteredProjects.map((project: Project) => (
-          <Card key={project.id} className="grid h-[600px] overflow-hidden">
+          <Card
+            key={project.id}
+            className="grid h-[650px] w-[310px] overflow-hidden"
+          >
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={500}
-                height={500}
-                priority
-              />
-              <ul className="mt-2 flex flex-wrap gap-2 text-sm text-muted-foreground">
+              <div className="relative h-[130px] w-[260px]">
+                <Image src={project.image} alt={project.title} fill priority />
+              </div>
+              <ul className="mt-2 flex h-[52px] flex-wrap gap-2 text-sm text-muted-foreground">
                 {project.tech.map((tech: string) => (
                   <li key={tech}>
-                    <Badge>{tech}</Badge>
+                    <Badge variant={'secondary'}>{tech}</Badge>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 line-clamp-6 text-ellipsis text-sm leading-6">
+              <p className="mt-4 h-[170px] text-sm leading-6">
                 {locale === 'en'
                   ? project.descriptionEn
                   : project.descriptionFr}
               </p>
             </CardContent>
-            <CardFooter className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <CardFooter className="grid">
               <Link className="grid" href={project.codeLink} target="_blank">
                 <Button className="gap-2">
                   <FaGithub />
