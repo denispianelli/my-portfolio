@@ -52,4 +52,17 @@ export const projects = [
     codeLink: 'https://github.com/denispianelli/nextjs-planets-fact-site',
     demoLink: 'https://nextjs-planets-fact-site.vercel.app/',
   },
+	{
+    id: 5,
+    type: 'Game',
+    tech: ['Next.js', 'React', 'Tailwind'],
+    title: 'Connect Four',
+    descriptionEn:
+      'This project showcases the classic Connect Four game with a modern twist, offering an interactive and visually appealing experience. It is designed for two players to enjoy on the same computer or mobile device.',
+    descriptionFr:
+      'Ce projet met en avant le jeu classique Puissance 4 avec une touche moderne, offrant une expérience interactive et visuellement attrayante. Il est conçu pour être joué à deux sur le même ordinateur ou appareil mobile.',
+    image: '/projects/connect-four.png',
+    codeLink: 'https://github.com/denispianelli/nextjs-connect-four-game',
+    demoLink: 'https://nextjs-connect-four-game.vercel.app/',
+  },
 ];
