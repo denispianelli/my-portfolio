@@ -1,11 +1,12 @@
 import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
+import { Separator } from './ui/separator';
 
 export default function Testimonials() {
   const t = useTranslations('Testimonials');
 
   return (
-    <section className="grid grid-cols-3 space-x-4 px-8 py-16">
+    <section className="grid grid-cols-1 space-x-4 py-16 md:px-8 lg:grid-cols-3">
       <Card className="flex flex-col justify-between border-transparent bg-transparent">
         <CardContent>
           <CardHeader>
@@ -24,6 +25,7 @@ export default function Testimonials() {
           </div>
         </CardFooter>
       </Card>
+      <Separator w-full className="lg:hidden" />
       <Card className="flex flex-col justify-between border-none bg-transparent">
         {' '}
         <CardContent>
@@ -43,6 +45,7 @@ export default function Testimonials() {
           </div>
         </CardFooter>
       </Card>
+      <Separator w-full className="lg:hidden" />
       <Card className="flex flex-col justify-between border-none bg-transparent">
         {' '}
         <CardContent>
