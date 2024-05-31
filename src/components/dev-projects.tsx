@@ -102,47 +102,49 @@ export default function DevProjects() {
           {t('button4')}
         </Button>
       </div>
-      <div className="mx-auto grid grid-flow-row justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,308px)] lg:grid-cols-[repeat(3,308px)]">
+      <div className="mx-auto grid grid-flow-row grid-cols-[358px] justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,358px)] lg:grid-cols-[repeat(3,358px)]">
         {filteredProjects.map((project: Project) => (
           <Card
             key={project.id}
-            className="grid h-[650px] w-[310px] overflow-hidden border-none bg-transparent"
+            className="grid h-[600px]  overflow-hidden border-none bg-transparent"
           >
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
-            </CardHeader>
             <CardContent>
-              <div className="relative h-[130px] w-[260px]">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="130px"
-                  priority
-                />
-              </div>
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={358}
+                height={200}
+                priority
+                className="rounded-md"
+              />
               <ul className="mt-2 flex h-[52px] flex-wrap gap-2 text-sm text-muted-foreground">
                 {project.tech.map((tech: string) => (
                   <li key={tech}>
-                    <Badge variant={'secondary'}>{tech}</Badge>
+                    <Badge variant={'outline'}>{tech}</Badge>
                   </li>
                 ))}
               </ul>
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                {project.title}
+              </h4>
               <p className="mt-4 h-[170px] text-sm leading-6">
                 {locale === 'en'
                   ? project.descriptionEn
                   : project.descriptionFr}
               </p>
             </CardContent>
-            <CardFooter className="grid grid-cols-2 gap-4">
+            <CardFooter className="flex gap-2">
               <Link className="grid" href={project.codeLink} target="_blank">
-                <Button className="gap-2">
+                <Button
+                  className="gap-2 border-active text-active"
+                  variant={'outline'}
+                >
                   <FaGithub />
                   {t('button5')}
                 </Button>
               </Link>
               <Link className="grid" href={project.demoLink} target="_blank">
-                <Button className="gap-2 bg-active">
+                <Button className="gap-2 underline" variant={'link'}>
                   <IoBrowsersOutline />
                   {t('button6')}
                 </Button>

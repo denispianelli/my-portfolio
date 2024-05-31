@@ -42,7 +42,7 @@ export default async function RootLayout({
           defaultTheme="system"
           enableSystem
           storageKey="theme"
-          disableTransitionOnChange={true}
+          disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
             <Header />
