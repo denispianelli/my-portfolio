@@ -63,6 +63,27 @@
     "button5": "View Code",
     "button6": "View Demo"
   },
+
+  "Testimonials": {
+    "Item1": {
+      "h4": "DWWM JS – Progress Report – Foundations",
+      "p1": "“Overall, you are a brilliant and very diligent student. Your seriousness and determination are admirable. Congratulations on your outstanding performance! 🌟💼”",
+      "p2": "Etienne Barreau",
+      "p3": "Tutor at O'Clock"
+    },
+    "Item2": {
+      "h4": "DWWM JS – Data Spec – OBlog Workshop",
+      "p1": "“What a workshop! The code is clean, the logical architecture. Everything done demonstrates a certain level of mastery and professional rigor. Congratulations!”",
+      "p2": "Benjamin Nougadère",
+      "p3": "Trainer at O'Clock"
+    },
+    "Item3": {
+      "h4": "DWWM – Professional Title – Jury Feedback",
+      "p1": "“Your presentation was appreciated for its clarity and your mastery of the project presented. The exchanges were smooth, demonstrating your ability to effectively communicate your ideas and engage your audience. These elements are crucial in professional development and show that you already have a good foundation for evolving in the field of web and mobile development.”",
+      "p2": "Jury",
+      "p3": "DWWM Professional Title"
+    }
+  },
   "Contact": {
     "h2": "Let's [work] together",
     "p1": "Enhance your digital presence with effective and reliable web development solutions. Ready to collaborate?",

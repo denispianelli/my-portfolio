@@ -63,6 +63,26 @@
     "button5": "Voir le code",
     "button6": "Voir la démo"
   },
+  "Testimonials": {
+    "Item1": {
+      "h4": "DWWM JS – Bilan de progression – Fondations",
+      "p1": "“Dans l’ensemble, tu es un étudiant brillant et très assidu. Ton sérieux et ta détermination sont admirables. Félicitations pour tes performances exceptionnelles ! 🌟💼”",
+      "p2": "Etienne Barreau",
+      "p3": "Tuteur chez O'Clock"
+    },
+    "Item2": {
+      "h4": "DWWM JS – Spé Data – Atelier OBlog",
+      "p1": "“Quel atelier ! Le code est propre, l’architecture logique. Tout ce qui a été fait démontre une certaine maîtrise et rigueur de niveau professionnel. Félicitations !”",
+      "p2": "Benjamin Nougadère",
+      "p3": "Formateur chez O'Clock"
+    },
+    "Item3": {
+      "h4": "DWWM – Titre Pro – Feedback Jury",
+      "p1": "“Ta présentation a été appréciée pour sa clarté et ta maîtrise du projet présenté. Les échanges ont été fluides, témoignant de ta capacité à communiquer efficacement tes idées et à engager ton auditoire. Ces éléments sont cruciaux dans le développement professionnel et montrent que tu possèdes déjà une bonne base pour évoluer dans le domaine du développement web et mobile.”",
+      "p2": "Jurys",
+      "p3": "Titre Professionnel DWWM"
+    }
+  },
   "Contact": {
     "h2": "Travaillons [ensemble]",
     "p1": "Améliorez votre présence numérique avec des solutions de développement web efficaces et fiables. Prêt à collaborer ?",
