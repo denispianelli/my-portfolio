@@ -7,7 +7,7 @@ export const projects = [
     descriptionEn:
       'Next.js Auth Starter is a full-stack web application template designed to kickstart your authentication-related projects. It provides a solid foundation for implementing authentication features such as user registration, login, and authentication persistence.',
     descriptionFr:
-      "Next.js Auth Starter est un modèle d'application web full-stack conçu pour démarrer vos projets liés à l'authentification. Il fournit une base solide pour implémenter des fonctionnalités d'authentification telles que l'enregistrement d'utilisateurs, la connexion et la persistance de l'authentification.,",
+      "Next.js Auth Starter est un modèle d'application web full-stack conçu pour démarrer vos projets liés à l'authentification. Il fournit une base solide pour implémenter des fonctionnalités d'authentification telles que l'enregistrement d'utilisateurs, la connexion et la persistance de l'authentification.",
     image: '/projects/nextjs-auth-starter.png',
     codeLink:
       'https://github.com/denispianelli/nextjs-tailwind-prisma-nextauth-template',

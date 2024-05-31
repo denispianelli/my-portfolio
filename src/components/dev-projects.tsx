@@ -106,7 +106,7 @@ export default function DevProjects() {
         {filteredProjects.map((project: Project) => (
           <Card
             key={project.id}
-            className="grid h-[650px] w-[310px] overflow-hidden"
+            className="grid h-[650px] w-[310px] overflow-hidden border-none bg-transparent"
           >
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
@@ -134,7 +134,7 @@ export default function DevProjects() {
                   : project.descriptionFr}
               </p>
             </CardContent>
-            <CardFooter className="grid">
+            <CardFooter className="grid grid-cols-2 gap-4">
               <Link className="grid" href={project.codeLink} target="_blank">
                 <Button className="gap-2">
                   <FaGithub />

@@ -4,6 +4,7 @@ import DevProjects from '@/components/dev-projects';
 import Contact from '@/components/contact';
 
 import { getTranslations } from 'next-intl/server';
+import Testimonials from '@/components/testimonials';
 
 export async function generateMetadata({
   params: { locale },
@@ -27,6 +28,7 @@ export default function Page() {
       <AboutMe />
       <div id="portfolio" className="relative -top-[45px]"></div>
       <DevProjects />
+      <Testimonials />
       <div id="contact" className="relative -top-[45px]"></div>
       <Contact />
     </main>
