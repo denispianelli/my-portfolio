@@ -102,7 +102,7 @@ export default function DevProjects() {
           {t('button4')}
         </Button>
       </div>
-      <div className="mx-auto grid grid-flow-row grid-cols-[358px] justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,358px)] lg:grid-cols-[repeat(3,358px)]">
+      <div className="mx-auto grid grid-flow-row grid-cols-[358px] justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,358px)] xl:grid-cols-[repeat(3,358px)]">
         {filteredProjects.map((project: Project) => (
           <Card
             key={project.id}
