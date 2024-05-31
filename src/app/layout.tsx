@@ -44,7 +44,7 @@ export default async function RootLayout({
           storageKey="theme"
           disableTransitionOnChange
         >
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
             {children}
             <Footer />
