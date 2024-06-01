@@ -1,15 +1,17 @@
 'use client';
 
-import { Separator } from '@/components/ui/separator';
+import Error from 'next/error';
+
+// Render the default Next.js 404 page when a route
+// is requested that doesn't match the middleware and
+// therefore doesn't have a locale associated with it.
 
 export default function NotFound() {
   return (
-    <main className="flex h-[calc(100vh-111px)] items-center justify-center ">
-      <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-        404
-      </h1>
-      <Separator orientation="vertical" className="mx-8 h-16 " />
-      <p>This page could not be found.</p>
-    </main>
+    <html lang="en">
+      <body>
+        <Error statusCode={404} />
+      </body>
+    </html>
   );
 }
