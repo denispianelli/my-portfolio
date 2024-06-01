@@ -3,22 +3,8 @@ import AboutMe from '@/components/about-me';
 import DevProjects from '@/components/dev-projects';
 import Contact from '@/components/contact';
 
-import { getTranslations } from 'next-intl/server';
 import Testimonials from '@/components/testimonials';
 import { notFound } from 'next/navigation';
-
-// export async function generateMetadata({
-//   params: { locale },
-// }: {
-//   params: { locale: string };
-// }) {
-//   const t = await getTranslations({ locale, namespace: 'Metadata' });
-
-//   return {
-//     title: t('title'),
-//     description: t('description'),
-//   };
-// }
 
 export default function Page({ params }: { params: { locale: string } }) {
   const { locale } = params;
