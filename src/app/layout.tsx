@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Footer from '@/components/footer';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -78,6 +78,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
