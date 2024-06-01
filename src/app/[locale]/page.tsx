@@ -4,13 +4,8 @@ import DevProjects from '@/components/dev-projects';
 import Contact from '@/components/contact';
 
 import Testimonials from '@/components/testimonials';
-import { notFound } from 'next/navigation';
 
-export default function Page({ params }: { params: { locale: string } }) {
-  const { locale } = params;
-
-  if (locale !== 'en' && locale !== 'fr') notFound();
-
+export default function Page() {
   return (
     <main className="flex flex-col items-center">
       <div id="home" className="relative -top-[64px]"></div>
