@@ -12,8 +12,6 @@ export default function SideNav() {
     hash = window.location.hash;
   }
 
-  console.log('const[hash,setHash]=useState ~ hash:', hash);
-
   const t = useTranslations('Navigation');
 
   const links = [

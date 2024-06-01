@@ -1,8 +1,9 @@
+'use client';
+
 import Hero from '@/components/hero';
 import AboutMe from '@/components/about-me';
 import DevProjects from '@/components/dev-projects';
 import Contact from '@/components/contact';
-
 import Testimonials from '@/components/testimonials';
 
 export default function Page() {
