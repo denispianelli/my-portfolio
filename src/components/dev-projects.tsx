@@ -2,13 +2,7 @@
 
 import Image from 'next/image';
 import { Button } from './ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from './ui/card';
+import { Card, CardContent, CardFooter } from './ui/card';
 import { Badge } from './ui/badge';
 import { FaGithub } from 'react-icons/fa';
 import { IoBrowsersOutline } from 'react-icons/io5';
@@ -49,19 +43,6 @@ export default function DevProjects() {
       </h2>
       <p className="mb-6 text-center text-muted-foreground">{t('p1')}</p>
       <div className="mb-6 flex justify-center gap-2 [&>button]:text-xs sm:[&>button]:text-base">
-        {/* <Button
-          onClick={() => setFilter('All')}
-          variant={'ghost'}
-          className={clsx(
-            'bg-none hover:bg-active hover:text-primary-foreground',
-            {
-              'bg-active text-primary-foreground hover:bg-active':
-                filter === 'All',
-            },
-          )}
-        >
-          {t('button1')}
-        </Button> */}
         <Button
           onClick={() => setFilter('App')}
           variant={'ghost'}
