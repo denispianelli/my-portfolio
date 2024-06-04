@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function TopNav({ className }: { className?: string }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -12,13 +13,16 @@ export default function TopNav({ className }: { className?: string }) {
     typeof window !== 'undefined' ? window.location.hash : '',
   );
 
+  const params = useParams();
+  const { locale } = params;
+
   const t = useTranslations('Navigation');
 
   const links = [
-    { href: '#home', label: t('home.label') },
-    { href: '#about-me', label: t('about.label') },
-    { href: '#portfolio', label: t('portfolio.label') },
-    { href: '#contact', label: t('contact.label') },
+    { href: `/${locale}/#home`, label: t('home.label') },
+    { href: `/${locale}/#about-me`, label: t('about.label') },
+    { href: `/${locale}/#portfolio`, label: t('portfolio.label') },
+    { href: `/${locale}/#contact`, label: t('contact.label') },
   ];
 
   useEffect(() => {
