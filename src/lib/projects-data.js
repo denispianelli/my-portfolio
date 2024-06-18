@@ -65,4 +65,17 @@ export const projects = [
     codeLink: 'https://github.com/denispianelli/nextjs-connect-four-game',
     demoLink: 'https://nextjs-connect-four-game.vercel.app/',
   },
+	{
+		id: 6,
+		type: 'Website',
+		tech: ['Next.js', 'React', 'Tailwind', 'Prisma'],
+		title: 'Audiophile E-Commerce',
+		descriptionEn:
+			'Audiophile E-Commerce is a modern and responsive e-commerce website that specializes in selling high-quality audio equipment. It features a user-friendly interface, smooth navigation.',
+		descriptionFr:
+			"Audiophile E-Commerce est un site web e-commerce moderne et réactif spécialisé dans la vente d'équipements audio de haute qualité. Il dispose d'une interface conviviale, d'une navigation fluide.",
+		image: '/projects/audiophile-ecommerce.png',
+		codeLink: 'https://github.com/denispianelli/nextjs-audiophile-ecommerce-website',
+		demoLink: 'https://nextjs-audiophile-ecommerce-website.vercel.app/',
+	}
 ];
