@@ -22,6 +22,7 @@ export function Header() {
           alt="Denis Pianelli Logo"
           width={32}
           height={32}
+          priority
         />
         <div className="hidden lg:block">
           <h2 className="font-semibold">Denis Pianelli</h2>
