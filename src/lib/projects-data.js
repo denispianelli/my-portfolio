@@ -11,7 +11,7 @@ export const projects = [
     image: '/projects/nextjs-auth-starter.png',
     codeLink:
       'https://github.com/denispianelli/nextjs-tailwind-prisma-nextauth-template',
-    demoLink: 'https://nextjs-tailwind-prisma-nextauth-template.vercel.app/',
+    demoLink: 'https://nextjs-tailwind-prisma-nextauth-template.vercel.app',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const projects = [
       "Une application Todo simple et intuitive qui permet aux utilisateurs de suivre leurs tâches. Les utilisateurs peuvent ajouter, supprimer et marquer les tâches comme terminées. L'application dispose également d'un design propre et réactif pour une expérience utilisateur optimale.",
     image: '/projects/todo-app.png',
     codeLink: 'https://github.com/denis-pianelli/interactivity-todo-app',
-    demoLink: 'https://denis-pianelli.github.io/interactivity-todo-app/',
+    demoLink: 'https://denis-pianelli.github.io/interactivity-todo-app',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const projects = [
       "O'Survivors est un jeu de survie en 2D où les joueurs doivent résister à des vagues de monstres de plus en plus puissantes.",
     image: '/projects/o-survivors.png',
     codeLink: 'https://github.com/denispianelli/projet-tp-front',
-    demoLink: 'https://projet-tp-front.vercel.app/',
+    demoLink: 'https://projet-tp-front.vercel.app',
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const projects = [
       'Planets Fact est un site web éducatif qui fournit des informations détaillées et des faits intéressants sur chacune des huit planètes de notre système solaire.',
     image: '/projects/planets-fact.png',
     codeLink: 'https://github.com/denispianelli/nextjs-planets-fact-site',
-    demoLink: 'https://nextjs-planets-fact-site.vercel.app/',
+    demoLink: 'https://nextjs-planets-fact-site.vercel.app',
   },
 	{
     id: 5,
@@ -63,7 +63,7 @@ export const projects = [
       'Ce projet met en avant le jeu classique Puissance 4 avec une touche moderne, offrant une expérience interactive et visuellement attrayante. Il est conçu pour être joué à deux sur le même ordinateur ou appareil mobile.',
     image: '/projects/connect-four.png',
     codeLink: 'https://github.com/denispianelli/nextjs-connect-four-game',
-    demoLink: 'https://nextjs-connect-four-game.vercel.app/',
+    demoLink: 'https://nextjs-connect-four-game.vercel.app',
   },
 	{
 		id: 6,
@@ -76,6 +76,19 @@ export const projects = [
 			"Audiophile E-Commerce est un site web e-commerce moderne et réactif spécialisé dans la vente d'équipements audio de haute qualité. Il dispose d'une interface conviviale, d'une navigation fluide.",
 		image: '/projects/audiophile-ecommerce.png',
 		codeLink: 'https://github.com/denispianelli/nextjs-audiophile-ecommerce-website',
-		demoLink: 'https://nextjs-audiophile-ecommerce-website.vercel.app/',
+		demoLink: 'https://nextjs-audiophile-ecommerce-website.vercel.app',
+	},
+	{
+		id: 7,
+		type: 'App',
+		tech: ['Next.js', 'React', 'Tailwind', 'PostgreSQL'],
+		title: 'Invoice App',
+		descriptionEn:
+			'Invoice App is a powerful and intuitive application designed to streamline your invoicing process.Sign up for a free account and start creating and managing your invoices with ease.',
+		descriptionFr:
+			"Invoice App est une application puissante et intuitive conçue pour rationaliser votre processus de facturation. Inscrivez-vous pour un compte gratuit et commencez à créer et à gérer vos factures en toute simplicité.",
+		image: '/projects/invoice-app.png',
+		codeLink: 'https://github.com/denispianelli/nextjs-invoice-app',
+		demoLink: 'https://nextjs-invoice-app-pearl.vercel.app',
 	}
 ];
