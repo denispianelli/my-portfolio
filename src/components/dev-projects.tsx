@@ -85,53 +85,53 @@ export default function DevProjects() {
       </div>
       <div className="mx-auto grid grid-flow-row grid-cols-[358px] justify-center justify-items-center gap-12 md:grid-cols-[repeat(2,358px)] xl:grid-cols-[repeat(3,358px)]">
         {filteredProjects.map((project: Project) => (
-          <Card
+          <div
             key={project.id}
-            className="grid h-[600px]  overflow-hidden border-none bg-transparent"
+            className="grid gap-2 border-none bg-transparent"
           >
-            <CardContent>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={358}
-                height={200}
-                priority
-                className="rounded-md"
-              />
-              <ul className="mt-2 flex h-[52px] flex-wrap gap-2 text-sm text-muted-foreground">
-                {project.tech.map((tech: string) => (
-                  <li key={tech}>
-                    <Badge variant={'outline'}>{tech}</Badge>
-                  </li>
-                ))}
-              </ul>
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                {project.title}
-              </h4>
-              <p className="mt-4 h-[170px] text-sm leading-6">
-                {locale === 'en'
-                  ? project.descriptionEn
-                  : project.descriptionFr}
-              </p>
-            </CardContent>
-            <CardFooter className="flex gap-2">
-              <Link className="grid" href={project.codeLink} target="_blank">
-                <Button
-                  className="gap-2 border-active text-active"
-                  variant={'outline'}
-                >
-                  <FaGithub />
-                  {t('button5')}
-                </Button>
-              </Link>
-              <Link className="grid" href={project.demoLink} target="_blank">
-                <Button className="gap-2 underline" variant={'link'}>
-                  <IoBrowsersOutline />
-                  {t('button6')}
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
+            <Link href={project.demoLink} target="_blank">
+              <div className="relative h-[180px] w-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="30vw"
+                  priority
+                  className="rounded-md object-contain"
+                />
+              </div>
+            </Link>
+
+            <ul className="mt-2 flex h-[52px] flex-wrap gap-2 text-sm text-muted-foreground">
+              {project.tech.map((tech: string) => (
+                <li key={tech}>
+                  <Badge variant={'outline'}>{tech}</Badge>
+                </li>
+              ))}
+            </ul>
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              {project.title}
+            </h4>
+            <p className="mt-4 h-[170px] text-sm leading-6">
+              {locale === 'en' ? project.descriptionEn : project.descriptionFr}
+            </p>
+
+            <Link className="grid" href={project.codeLink} target="_blank">
+              <Button
+                className="gap-2 border-active text-active"
+                variant={'outline'}
+              >
+                <FaGithub />
+                {t('button5')}
+              </Button>
+            </Link>
+            <Link className="grid" href={project.demoLink} target="_blank">
+              <Button className="gap-2 underline" variant={'link'}>
+                <IoBrowsersOutline />
+                {t('button6')}
+              </Button>
+            </Link>
+          </div>
         ))}
       </div>
     </section>
